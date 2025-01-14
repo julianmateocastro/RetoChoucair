@@ -17,11 +17,9 @@ public class ContenedorProgramarEntrevista {
     public static final Target CAMPO_ENTREVISTADOR = Target.the("Entrevistador").locatedBy("//input[@include-employees=\"onlyCurrent\"]");
 
 
-    public static final Target PRIMER_VALOR_CAMPO_ENTREVISTADOR = Target.the("Primer valor campo entrevistador").locatedBy("//div[contains(@class, 'oxd-autocomplete-option')][1]");
+    public static final Target PRIMER_VALOR_CAMPO_ENTREVISTADOR = Target.the("Primer valor campo entrevistador").locatedBy("//div[@role='option'][1]");
 
 
-
-    public static final Target INGRESAR_FECHA = Target.the("Fecha").locatedBy(" //input[@placeholder='yyyy-dd-mm']");
 
     public static final Target CAMPO_TIEMPO = Target.the("Tiempo").locatedBy("//input[@placeholder='hh:mm']");
 
