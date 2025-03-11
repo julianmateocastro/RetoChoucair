@@ -122,8 +122,6 @@ public class ContratacionStepdefinitions {
 
     }
 
-
-
     @Y("ingresar notas")
     public void ingreseNotas(List<TablaCandidatos> tablaCandidatosList) {
         OnStage.theActorInTheSpotlight().attemptsTo(IngresarNotas.enElCampoNotas(tablaCandidatosList.get(0)));
@@ -208,5 +206,6 @@ public class ContratacionStepdefinitions {
 
         OnStage.theActorInTheSpotlight().attemptsTo(ClicBotonBusqueda.clic());
     }
+
 }
 

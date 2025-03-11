@@ -1,0 +1,24 @@
+pool:
+  name: My_Agent_pool
+
+steps:
+
+- checkout: self
+  displayName: 'Clonar repositorio'
+
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'C:\agent\_work\1\s\pom.xml'
+    goals: 'clean verify'
+    publishJUnitResults: true
+    testResultsFiles: '*/surefire-reports/TEST-.xml'
+
+- script: |
+    mvn serenity:aggregate
+  displayName: 'Generar reporte de Serenity'
+- task: PublishBuildArtifacts@1
+  displayName: 'Publicar reportes Serenity como artifact'
+  inputs:
+    PathtoPublish: '$(System.DefaultWorkingDirectory)/target/site/serenity'
+    ArtifactName: 'serenity-report'
+    publishLocation: 'Container'

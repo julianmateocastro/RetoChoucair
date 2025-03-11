@@ -9,6 +9,7 @@ import static co.com.retochoucair.userinterface.ContenedorCandidatos.*;
 
 public class ValidarDatosCandidato implements Question<Boolean> {
 
+
     @Override
     public Boolean answeredBy(Actor actor) {
         String primerNombre = actor.recall("PrimerNombre");

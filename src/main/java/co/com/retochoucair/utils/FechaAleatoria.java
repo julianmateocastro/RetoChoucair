@@ -1,14 +1,10 @@
 package co.com.retochoucair.utils;
 
-import com.github.javafaker.Faker;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class FechaAleatoria {
 
@@ -26,5 +22,7 @@ public class FechaAleatoria {
             SimpleDateFormat formato = new SimpleDateFormat("yyyy-dd-MM");
             return formato.format(fechaGenerada);
         }
+
+
 
 }
