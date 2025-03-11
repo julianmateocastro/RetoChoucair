@@ -8,7 +8,7 @@ steps:
 
 - task: Maven@3
   inputs:
-    mavenPomFile: 'C:\agent\_work\1\s\pom.xml'
+    mavenPomFile: 'C:\agents\_work\1\s\pom.xml'
     goals: 'clean verify'
     publishJUnitResults: true
     testResultsFiles: '*/surefire-reports/TEST-.xml'
